@@ -16,7 +16,19 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    
+    [self configUI];
+        
+}
+
+-(void)configUI{
+    self.title = @"国际化APP";
+    self.view.backgroundColor = [UIColor whiteColor];
+    UILabel *lab = [[UILabel alloc]init];
+    lab.frame = CGRectMake(100, 200, 100, 30);
+    [self.view addSubview:lab];
+    NSString *str = NSLocalizedString(@"click", nil);
+    lab.text = str;
 }
 
 
